@@ -1,0 +1,22 @@
+﻿# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Env / secrets
+.env
+.env.*
+
+# Local outputs & logs
+out/
+*.log
+
+# VS Code
+.vscode/
+
+# Docker volumes (if any)
+**/pgdata/
+
+# OS cruft
+.DS_Store
+Thumbs.db

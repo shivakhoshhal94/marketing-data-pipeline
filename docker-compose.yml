@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:15
+    container_name: marketing_db
+    environment:
+      POSTGRES_DB: marketing
+      POSTGRES_USER: marketing
+      POSTGRES_PASSWORD: marketing
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+  adminer:
+    image: adminer
+    container_name: marketing_adminer
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+volumes:
+  pgdata:
